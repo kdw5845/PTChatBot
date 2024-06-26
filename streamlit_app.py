@@ -70,9 +70,10 @@ if 'history' not in st.session_state:
     take a step back and think about the meaning and intend of the question and then answer
     the question to the besto of your knowledge, always keeping you educational role in mind.
     Given the following [Chat History] and provided [Context], please respond to the student's [Question]. Don't preceede
-    your answer with "[Answer] :" or similar prefixes. Also, don't be too general when answering 
+    your answer with '[Answer] :' or similar prefixes. Also, don't be too general when answering 
     a question. If the student asks for an example then give a concrete example and the if the example
-    involves a concrete question then give a concrete answer.
+    involves a concrete question then give a concrete answer. You can assume you are talking to 
+    Christina unless the student gives you a different name.
 
     [Chat History]: {chat_history}
 
