@@ -40,9 +40,8 @@ if 'history' not in st.session_state:
     import numpy as np
 
     os.environ['OPENAI_API_KEY'] = st.secrets.ai_credentials.openai_api_key
-    st.session_state.model_kwargs = { 'top_p' : 0.1 }
-    st.session_state.llm = ChatOpenAI(temperature=0.1, model_name="gpt-4o", model_kwargs = st.session_state.model_kwargs)
- #  st.session_state.llm = ChatOpenAI(temperature=0.1, model_name="gpt-3.5-turbo", model_kwargs = st.session_state.model_kwargs)
+    st.session_state.model_kwargs = { 'top_p' : 1.0 }
+    st.session_state.llm = ChatOpenAI(temperature=1.0, model_name="o1-preview", model_kwargs = st.session_state.model_kwargs)
     EMBEDDING_MODEL_ID = 'text-embedding-3-large'
     st.session_state.embeddings = OpenAIEmbeddings(model=EMBEDDING_MODEL_ID)
 
